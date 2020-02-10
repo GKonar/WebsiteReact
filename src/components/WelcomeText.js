@@ -7,24 +7,24 @@ const TextWrapper = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin: ${({ theme }) => theme.margin.between};
+  margin: ${({ theme }) => theme.margin.related};
   .greeting {
     font-size: ${({ theme }) => theme.textSize.large};
   }
   .name {
     font-size: ${({ theme }) => theme.textSize.xxxlarge};
-    font-weight: 500;
   }
   .position {
    font-size: ${({ theme }) => theme.textSize.large};
+
   }
   .greeting,
   .name,
   .position {
     width: 35%;
-    padding-bottom: 8px;
+    padding-bottom: 5px;
     letter-spacing: 1px;
-    margin-left: 5rem;  
+    font-weight: 500;
   }
 `
 

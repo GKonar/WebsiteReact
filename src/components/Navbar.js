@@ -1,5 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
+import Toggle from 'react-toggle';
+import "react-toggle/style.css";
 
 import LinkElement from './LinkElement';
 
@@ -16,6 +18,22 @@ const List = styled.ul`
   align-items: center;
   width: 95%;
   position: relative;
+
+  .toggle {
+    margin-right: 3rem;
+  }
+  /* custom react-toggle classes */
+  .react-toggle-track-check,
+  .react-toggle-track-x {
+    position: absolute;
+    top: 11px;
+  }
+  .react-toggle--checked .react-toggle-track {
+    background-color: ${({ theme }) => theme.color.primary};
+  } 
+  .react-toggle--checked:hover:not(.react-toggle-disabled) .react-toggle-track {
+    background-color: ${({ theme }) => theme.color.primary};
+  }
 `
 
 const ListItem = styled.li`
@@ -86,6 +104,13 @@ function Navbar() {
   return (
     <Nav>
       <List>
+        <Toggle
+          icons={{
+            checked: '🌛',
+            unchecked: '😎',
+          }}
+          className='toggle'
+        />
         <LinkElement link="https://github.com/gkonar">
           <Logo>Gk</Logo>
         </LinkElement>
