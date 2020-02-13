@@ -22,26 +22,15 @@ const theme = {
 
   color: {
     primary: '#2f3542',
-    secondary: '#0081AD',
-    delete: '#FF4242',
-    offDelete: '#FF7575',
-    warning: '#FFCA44',
-    success: '#00D591',
-    textOnly: 'transparent',
-    section: '#F1F1F1',
-    white: '#FFFFFF',
-    black: '#1f1f1f',
+    secondary: '#ECF0F1',
+    secondaryGreen: '#16a085',
   },
 
   textColor: {
-    primary: '#FFFFFF',
-    secondary: '#FFFFFF',
-    delete: '#020202',
-    warning: '#003444',
-    success: '#003444',
-    pressable: '#0081AD',
-    black: '#1f1f1f',
-    white: '#FFFFFF',
+    primary: '#2f3542',
+    secondary: '#16a085',
+    secondaryLight: '#16a08442',
+    header: 'rgb(122, 121, 121)',
   },
 
   textSize: {
