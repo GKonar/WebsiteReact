@@ -1,14 +1,12 @@
 import React from 'react';
-import Portfolio from './components/Portfolio';
+import Portfolio from './pages/Portfolio';
 import { ThemeProvider } from 'styled-components/';
 import { StyleGuide } from './components';
 
 function App() {
   return (
     <ThemeProvider theme={StyleGuide}>
-      <div className="App">
-        <Portfolio />
-      </div>
+      <Portfolio />
     </ThemeProvider>
   );
 }
