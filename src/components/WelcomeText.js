@@ -8,6 +8,7 @@ const TextWrapper = styled.div`
   align-items: center;
   justify-content: center;
   margin: ${({ theme }) => theme.margin.related};
+  color:  ${({ theme }) => theme.color.primary};
   .greeting {
     font-size: ${({ theme }) => theme.textSize.large};
   }
