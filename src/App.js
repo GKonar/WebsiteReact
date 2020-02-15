@@ -1,12 +1,19 @@
 import React from 'react';
-import Portfolio from './pages/Portfolio';
 import { ThemeProvider } from 'styled-components/';
+import { Switch, Route } from 'react-router-dom';
+
 import { StyleGuide } from './components';
+
+import Portfolio from './pages/Portfolio';
+import Contact from './pages/Contact';
 
 function App() {
   return (
     <ThemeProvider theme={StyleGuide}>
-      <Portfolio />
+      <Switch>
+        <Route exact path='/' component={Portfolio} />
+        <Route exact path='/contact' component={Contact} />
+      </Switch>
     </ThemeProvider>
   );
 }
