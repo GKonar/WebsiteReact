@@ -14,6 +14,11 @@ const Nav = styled.nav`
   position: relative;
   margin: 0 auto;
   color: ${({ theme }) => theme.color.primary};
+
+  .link {
+    text-decoration: none;
+    color: ${({ theme }) => theme.color.primary};
+  }
 `
 
 const List = styled.ul`
@@ -72,7 +77,7 @@ const ListItem = styled.li`
         transform: translateY(1rem);
         opacity: 1;
         z-index: 1;
-    }
+  }
 }
 `
 
@@ -97,7 +102,9 @@ function Navbar() {
         <ListItem>
           <LinkElement link="https://github.com/gkonar">.Works</LinkElement>
         </ListItem>
-        <ListItem>.Contact</ListItem>
+        <ListItem>
+          <Link className='link' to='/contact'>.Contact</Link>
+        </ListItem>
       </List>
     </Nav>
   );
