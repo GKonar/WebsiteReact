@@ -40,7 +40,8 @@ const theme = {
     large: '2rem',
     medium: '1.5rem',
     regular: '1.25rem',
-    small: '1rem'
+    small: '1rem',
+    mobile: '.8rem'
   },
 
   input: {
