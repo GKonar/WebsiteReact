@@ -1,12 +1,18 @@
 import React from 'react'
 import styled from 'styled-components';
 
+import { sizes } from '../../helpers/sizes';
+
 const FooterText = styled.div`
   position: relative;
   height: 6.5rem;
   background-color: ${({ theme }) => theme.color.primary};
   display: flex;
   justify-content: center;
+
+  ${sizes.mobileS} {
+    display: none;
+  }
   
   p {
     color: ${({ theme }) => theme.textColor.secondary};

@@ -1,5 +1,8 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import styled from 'styled-components';
+import { sizes } from '../helpers/sizes';
+
+import { ThemeContext } from '../context/ThemeContext';
 
 const Logo = styled.div`
   font-size: ${({ theme }) => theme.textSize.medium};
@@ -13,6 +16,14 @@ const Logo = styled.div`
   font-weight: 700;
   letter-spacing: 1px;
 
+  ${sizes.tablet} {
+      left: 5%;
+    }
+
+  ${sizes.mobileL} {
+      left: 8%;
+    }
+ 
   &::after {
     content: "";
     border: 4px solid;
@@ -36,8 +47,13 @@ const Logo = styled.div`
 `
 
 function NavbarLogo({ children }) {
+  const { isDarkMode, toggleTheme } = useContext(ThemeContext);
+
+  const styles = {
+    color: isDarkMode ? 'white' : ''
+  }
   return (
-    <Logo>{children}</Logo>
+    <Logo style={styles}>{children}</Logo>
   )
 }
 

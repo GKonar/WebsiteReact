@@ -7,6 +7,8 @@ import ColorText from '../../components/ColorText';
 import SectionContainer from '../../components/SectionContainer';
 import LinkElement from '../../components/LinkElement';
 
+import { sizes } from '../../helpers/sizes';
+
 // Svg icons as components TODO // do I like this approach ??
 // Thanks for Icons https://icons8.com/icons/ 💚
 import { ReactComponent as Css } from '../../assets/icons/skills/css3.svg';
@@ -28,6 +30,11 @@ const Icon = styled.span`
   svg {
     width: 55px;
     height: 55px;
+
+    ${sizes.tablet} {
+      width: 40px;
+      height: 40px;
+    }
   }
 `
 function Skills() {

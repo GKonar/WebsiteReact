@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import styled from 'styled-components';
 import Toggle from 'react-toggle';
 import "react-toggle/style.css";
@@ -7,6 +7,8 @@ import { Link } from "react-router-dom";
 import { sizes } from '../helpers/sizes';
 import LinkElement from './LinkElement';
 import NavbarLogo from '../components/NavbarLogo';
+
+import { ThemeContext } from '../context/ThemeContext';
 
 const Nav = styled.nav`
   display: flex;
@@ -30,6 +32,9 @@ const List = styled.ul`
 
   .toggle {
     margin-right: 3rem;
+    ${sizes.mobileL} {
+      margin-right: .5rem;
+    }
   }
   
   /* custom react-toggle classes */
@@ -55,7 +60,10 @@ const ListItem = styled.li`
   position: relative;
 
   ${sizes.tablet} {
-    display: none;
+    margin: 1rem;
+    &:not(:last-child) {
+      display: none;
+    }
   }
 
   &::after {
@@ -82,10 +90,14 @@ const ListItem = styled.li`
 `
 
 function Navbar() {
-  const [isDarkMode, setDarkMode] = useState(false)
+  const { isDarkMode, toggleTheme } = useContext(ThemeContext);
+
+  const styles = {
+    color: isDarkMode ? 'white' : ''
+  }
 
   return (
-    <Nav>
+    <Nav >
       <List>
         <Toggle
           icons={{
@@ -93,17 +105,16 @@ function Navbar() {
             unchecked: '😎',
           }}
           className='toggle'
-          onChange={() => console.log('RAGNAR IS DEAD')}
+          onChange={toggleTheme}
         />
         <LinkElement link="https://github.com/gkonar">
           <NavbarLogo>Gk</NavbarLogo>
         </LinkElement>
-        <ListItem>.About</ListItem>
-        <ListItem>
+        <ListItem style={styles}>
           <LinkElement link="https://github.com/gkonar">.Works</LinkElement>
         </ListItem>
-        <ListItem>
-          <Link className='link' to='/contact'>.Contact</Link>
+        <ListItem style={styles}>
+          <Link style={styles} className='link' to='/contact'>.Contact</Link>
         </ListItem>
       </List>
     </Nav>

@@ -12,6 +12,7 @@ import { ReactComponent as Linkedin } from '../../assets/icons/reachme/linkedin.
 
 import cv from '../../assets/cv/GrzegorzKonarski-resume.pdf';
 
+import { sizes } from '../../helpers/sizes';
 
 const IconsContainer = styled.span`
   display: flex;
@@ -26,9 +27,12 @@ const IconsContainer = styled.span`
     width: 35px;
     height: 35px;
     transition: .2s;
-
     &:hover {
       transform: scale(1.2);
+    }
+    ${sizes.tablet} {
+      width: 30px;
+      height: 30px;
     }
   }
 `

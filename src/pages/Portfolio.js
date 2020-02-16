@@ -1,9 +1,9 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import styled from 'styled-components';
 
 import Navbar from '../components/Navbar';
 import WelcomeText from '../components/WelcomeText';
-import Image from '../components/Image';
+// import Image from '../components/Image';
 import CenteringContainer from '../components/CenteringContainer';
 
 import About from './sections/About';
@@ -12,6 +12,9 @@ import Reachme from './sections/Reachme';
 import Footer from './sections/Footer';
 
 import headerImage from '../assets/images/me.jpg';
+import { sizes } from '../helpers/sizes';
+
+import { ThemeContext } from '../context/ThemeContext';
 
 const Container = styled.div`
   border: 1rem solid #2f3542;
@@ -22,17 +25,37 @@ const ImageContainer = styled.div`
   margin: ${({ theme }) => theme.margin.between};
   display: flex;
   justify-content: center;
+  overflow: hidden;
+
+  ${sizes.tablet} {
+    margin: ${({ theme }) => theme.margin.sibling};
+  }
+`
+
+const Image = styled.img`
+  width: 100%;
+  ${sizes.tablet} {
+    width: 200%;
+    height: 200%;
+  }
 `
 
 
 function Portfolio() {
+  const { isDarkMode } = useContext(ThemeContext);
+
+  const styles = {
+    backgroundColor: isDarkMode ? 'black' : '',
+    border: isDarkMode ? '1rem solid black' : ''
+  }
+
   return (
-    <Container>
+    <Container style={styles}>
       <Navbar />
       <WelcomeText />
       <CenteringContainer>
         <ImageContainer>
-          <Image src={headerImage} alt="me" width="100%" />
+          <Image src={headerImage} alt="me" />
         </ImageContainer>
       </CenteringContainer>
       <About />

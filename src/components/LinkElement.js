@@ -1,5 +1,7 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import styled from 'styled-components';
+import { ThemeContext } from '../context/ThemeContext';
+
 
 const Container = styled.a`
   text-decoration: none;
@@ -8,7 +10,13 @@ const Container = styled.a`
 `
 
 function LinkElement({ children, link }) {
-  return <Container href={link} target="_blank" rel="noopener noreferrer">{children}</Container>
+  const { isDarkMode, toggleTheme } = useContext(ThemeContext);
+
+  const styles = {
+    color: isDarkMode ? 'white' : ''
+  }
+
+  return <Container style={styles} href={link} target="_blank" rel="noopener noreferrer">{children}</Container>
 }
 
 export default LinkElement;
