@@ -1,6 +1,6 @@
 // Breakpoints
 export const sizes = {
-  mobileS: `@media(max-width: 320px)`,
+  mobileS: `@media(max-width: 350px)`,
   mobileM: `@media(max-width: 375px)`,
   mobileL: `@media(max-width: 425px)`,
   tablet: `@media(max-width: 768px)`,
