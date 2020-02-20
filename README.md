@@ -2,9 +2,9 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## My website build with:
 
-ReactJS
-styled-componets
-React-Router
-MaterialUI
+- ReactJS
+- styled-componets
+- React-Router
+- MaterialUI
 
 Cheers
