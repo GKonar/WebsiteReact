@@ -1,5 +1,5 @@
 import React, { useState, useContext } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 import { makeStyles } from '@material-ui/core/styles';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
@@ -11,7 +11,7 @@ import H3 from "../components/H3";
 import LinkElement from '../components/LinkElement';
 
 import { ReactComponent as Mail } from '../assets/icons/reachme/mail-color.svg';
-import { ReactComponent as Back } from '../assets/icons/contact/undo.svg';
+import { ReactComponent as Back } from '../assets/icons/contact/arrow.svg';
 
 import styled from 'styled-components';
 import sizesMui from '../helpers/sizesMui';
@@ -89,6 +89,7 @@ const useStyles = makeStyles(theme => ({
 
 function Contact() {
   const classes = useStyles();
+  const history = useHistory();
   const [state, setState] = useState({
     name: '',
     email: '',
@@ -129,7 +130,10 @@ function Contact() {
       email: '',
       message: ''
     })
-    setStatus('success')
+    setStatus('success');
+    setTimeout(() => {
+      history.push("/");
+    }, 3000)
   }
 
   const styles = {
