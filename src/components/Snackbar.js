@@ -46,7 +46,3 @@ export default function CustomizedSnackbars({ status, setStatus, message }) {
     </div>
   );
 }
-
-  // <Button variant="outlined" onClick={handleClick}>
-  //   Open success snackbar
-  // </Button>
