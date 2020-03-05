@@ -41,7 +41,6 @@ const TextWrapper = styled.div`
     ${sizes.mobileL} {
       font-size: ${({ theme }) => theme.textSize.regular};
     }
-
   }
   .greeting,
   .name,

@@ -40,7 +40,6 @@ const Image = styled.img`
   }
 `
 
-
 function Portfolio() {
   const { isDarkMode } = useContext(ThemeContext);
 

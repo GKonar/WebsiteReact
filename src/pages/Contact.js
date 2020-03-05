@@ -193,7 +193,6 @@ function Contact() {
         setStatus={setStatus} status={status} message="Thanks! Will get back to You ASAP 😀" />
       <Footer />
     </div>
-
   );
 }
 
