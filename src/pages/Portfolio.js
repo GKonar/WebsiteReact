@@ -16,6 +16,10 @@ import { sizes } from '../helpers/sizes';
 
 import { ThemeContext } from '../context/ThemeContext';
 
+// Lazy load
+import LazyLoad from 'react-lazy-load';
+import ImageLoader from '../components/ImageLoader/ImageLoader';
+
 const Container = styled.div`
   border: 1rem solid #2f3542;
   background-color:${({ theme }) => theme.color.secondary};
@@ -54,7 +58,12 @@ function Portfolio() {
       <WelcomeText />
       <CenteringContainer>
         <ImageContainer>
-          <Image src={headerImage} alt="me" />
+          <LazyLoad
+            debounce={false}
+            offsetVertical={100}
+          >
+            <ImageLoader src={headerImage} alt="my-img" />
+          </LazyLoad>
         </ImageContainer>
       </CenteringContainer>
       <About />
