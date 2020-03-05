@@ -2,7 +2,7 @@ import React from 'react';
 import { ThemeProvider } from 'styled-components/';
 import { Switch, Route } from 'react-router-dom';
 
-import { StyleGuide } from './components';
+import StyleGuide from './themes/StyleGuide';
 
 import Portfolio from './pages/Portfolio';
 import Contact from './pages/Contact';
