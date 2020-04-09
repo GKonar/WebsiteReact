@@ -10,7 +10,7 @@ const Container = styled.a`
 `
 
 function LinkElement({ children, link }) {
-  const { isDarkMode, toggleTheme } = useContext(ThemeContext);
+  const { isDarkMode } = useContext(ThemeContext);
 
   const styles = {
     color: isDarkMode ? 'white' : ''

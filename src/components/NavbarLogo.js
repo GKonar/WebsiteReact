@@ -47,7 +47,7 @@ const Logo = styled.div`
 `
 
 function NavbarLogo({ children }) {
-  const { isDarkMode, toggleTheme } = useContext(ThemeContext);
+  const { isDarkMode } = useContext(ThemeContext);
 
   const styles = {
     color: isDarkMode ? 'white' : ''
