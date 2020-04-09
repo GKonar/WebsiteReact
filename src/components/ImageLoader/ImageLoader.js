@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import './imageAnimation.css';
+import styled from 'styled-components';
+import { sizes } from '../../helpers/sizes';
 
 import { withStyles } from '@material-ui/core/styles';
 
@@ -19,6 +21,15 @@ const styles = {
   }
 }
 
+const Image = styled.img`
+  width: 150%;
+  height: 150%;
+  ${sizes.tablet} {
+    width: 200%;
+    height: 200%;
+  }
+`
+
 function ImageLoader({ classes, src }) {
   const [loaded, setLoaded] = useState(false);
   let [className] = useState('');
@@ -29,8 +40,8 @@ function ImageLoader({ classes, src }) {
 
   className = `${className} ${loaded ? classes.loaded : classes.loading}`
 
-  return <img
-    style={{ width: '100%' }}
+  return <Image
+    style={{ width: '100%', height: '100%' }}
     src={src}
     className={className}
     onLoad={onLoad}

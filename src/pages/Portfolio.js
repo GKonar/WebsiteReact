@@ -33,14 +33,7 @@ const ImageContainer = styled.div`
 
   ${sizes.tablet} {
     margin: ${({ theme }) => theme.margin.sibling};
-  }
-`
-
-const Image = styled.img`
-  width: 100%;
-  ${sizes.tablet} {
-    width: 200%;
-    height: 200%;
+    width: 100%;
   }
 `
 
