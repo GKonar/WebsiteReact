@@ -22,11 +22,13 @@ const styles = {
 }
 
 const Image = styled.img`
-  width: 150%;
-  height: 150%;
+  width: 100%;
+  height: 100%;
   ${sizes.tablet} {
-    width: 200%;
-    height: 200%;
+    position: relative;
+    width: 175%;
+    height: 175%;
+    right: 35%;
   }
 `
 
@@ -41,7 +43,7 @@ function ImageLoader({ classes, src }) {
   className = `${className} ${loaded ? classes.loaded : classes.loading}`
 
   return <Image
-    style={{ width: '100%', height: '100%' }}
+    // style={{ width: '100%', height: '100%' }}
     src={src}
     className={className}
     onLoad={onLoad}

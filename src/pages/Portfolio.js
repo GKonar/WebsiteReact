@@ -29,11 +29,12 @@ const ImageContainer = styled.div`
   margin: ${({ theme }) => theme.margin.between};
   display: flex;
   justify-content: center;
+  align-items: center;
   overflow: hidden;
 
   ${sizes.tablet} {
     margin: ${({ theme }) => theme.margin.sibling};
-    width: 100%;
+    /* width: 100%; */
   }
 `
 
