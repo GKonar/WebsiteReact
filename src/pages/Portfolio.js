@@ -42,8 +42,8 @@ function Portfolio() {
   const { isDarkMode } = useContext(ThemeContext);
 
   const styles = {
-    backgroundColor: isDarkMode ? 'black' : '',
-    border: isDarkMode ? '1rem solid black' : ''
+    backgroundColor: isDarkMode ? '#1e272e' : '',
+    border: isDarkMode ? '1rem solid #1e272e' : ''
   }
 
   return (

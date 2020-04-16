@@ -137,9 +137,9 @@ function Contact() {
   }
 
   const styles = {
-    border: isDarkMode ? '1rem solid black' : '',
+    border: isDarkMode ? '1rem solid #1e272e' : '',
     color: isDarkMode ? 'white' : '',
-    backgroundColor: isDarkMode ? 'black' : ''
+    backgroundColor: isDarkMode ? '#1e272e' : ''
   }
 
   const fieldsStyles = {
@@ -149,7 +149,7 @@ function Contact() {
   }
 
   return (
-    <div style={{ borderBottom: isDarkMode ? '0rem solid black' : '1rem solid #2f3542' }}>
+    <div style={{ borderBottom: isDarkMode ? '0rem solid #1e272e' : '1rem solid #2f3542' }}>
       <ContactContainer style={styles}>
         <Link className={classes.link} to="/"><Back style={{ fill: isDarkMode ? 'white' : '' }} /></Link>
         <H1>Contact me</H1>
