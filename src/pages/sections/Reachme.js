@@ -5,12 +5,9 @@ import LinkElement from '../../components/LinkElement';
 
 import { ReactComponent as Mail } from '../../assets/icons/reachme/mail-color.svg';
 import { ReactComponent as Facebook } from '../../assets/icons/reachme/facebook-color.svg';
-import { ReactComponent as Instagram } from '../../assets/icons/reachme/insta.svg';
-import { ReactComponent as Cv } from '../../assets/icons/reachme/cv.svg';
+import { ReactComponent as Instagram } from '../../assets/icons/reachme/instagram-color.svg';
 import { ReactComponent as Github } from '../../assets/icons/reachme/github-color.svg';
 import { ReactComponent as Linkedin } from '../../assets/icons/reachme/linkedin.svg';
-
-import cv from '../../assets/cv/GrzegorzKonarski-resume.pdf';
 
 import { sizes } from '../../helpers/sizes';
 
@@ -44,7 +41,6 @@ function Reachme() {
       <LinkElement link="mailto:grzegorz.konarski86@gmail.com"><Mail /></LinkElement>
       <LinkElement link="https://www.facebook.com/grzegorz.konarski.52"><Facebook /></LinkElement>
       <LinkElement link="https://www.instagram.com/konar42/"><Instagram /></LinkElement>
-      <LinkElement link={cv}><Cv /></LinkElement>
       <LinkElement link="https://github.com/gkonar"><Github /></LinkElement>
     </IconsContainer>
   )

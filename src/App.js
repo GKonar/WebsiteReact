@@ -2,6 +2,8 @@ import React from 'react';
 import { ThemeProvider } from 'styled-components/';
 import { Switch, Route } from 'react-router-dom';
 
+import LoadingPage from './components/LoadingPage';
+
 import StyleGuide from './themes/StyleGuide';
 
 import Portfolio from './pages/Portfolio';
@@ -13,6 +15,7 @@ function App() {
   return (
     <DarkThemeProvider>
       <ThemeProvider theme={StyleGuide}>
+        <LoadingPage />
         <Switch>
           <Route exact path='/' component={Portfolio} />
           <Route exact path='/contact' component={Contact} />

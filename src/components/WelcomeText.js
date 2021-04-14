@@ -74,7 +74,7 @@ function WelcomeText() {
     <TextWrapper style={{ color: isDarkMode ? 'white' : '' }}>
       <span className="greeting"><ReactRevealText show={showText}>Hello I'm</ReactRevealText></span>
       <span className="name"><ReactRevealText show={showText}>Grzegorz</ReactRevealText></span>
-      <span className="position"><ReactRevealText show={showText}>Junior Front-End Developer</ReactRevealText></span>
+      <span className="position"><ReactRevealText show={showText}>Software Developer</ReactRevealText></span>
     </TextWrapper>
   )
 }

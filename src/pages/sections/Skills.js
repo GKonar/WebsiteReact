@@ -19,6 +19,10 @@ import { ReactComponent as Npm } from '../../assets/icons/skills/npm.svg';
 import { ReactComponent as ReactJS } from '../../assets/icons/skills/react.svg';
 import { ReactComponent as Sass } from '../../assets/icons/skills/sass.svg';
 import { ReactComponent as Webpack } from '../../assets/icons/skills/webpack.svg';
+import { ReactComponent as CSharp } from '../../assets/icons/skills/c-sharp-48.svg';
+import { ReactComponent as SQL } from '../../assets/icons/skills/sql-code.svg';
+import { ReactComponent as MacOS } from '../../assets/icons/skills/mac-os-x-2.svg';
+import { ReactComponent as Windows } from '../../assets/icons/skills/windows.svg';
 
 const IconsContainer = styled.span`
   display: flex;
@@ -38,7 +42,8 @@ const Icon = styled.span`
   }
 `
 function Skills() {
-  const icons = [<Html />, <Css />, <Sass />, <Javascript />, <ReactJS />, <GitHub />, <Webpack />, <Npm />]
+  const skillsIcons = [<Html />, <Css />, <Sass />, <Javascript />, <CSharp />, <ReactJS />, <GitHub />, <Webpack />, <Npm />, <SQL />];
+  const osIcons = [<MacOS />, <Windows />];
 
   return (
     <SectionContainer>
@@ -46,14 +51,19 @@ function Skills() {
       <Paragraph>
         <ColorText>Some</ColorText>. of the technologies and tools which I use:
         <IconsContainer>
-          {icons.map((icon, i) => <Icon key={i}>{icon}</Icon>)}
+          {skillsIcons.map((icon, i) => <Icon key={i}>{icon}</Icon>)}
         </IconsContainer>
       </Paragraph>
       <Paragraph>
-        A partial overview of my personal projects and completed tutorials can be found on my
+        <ColorText>Like</ColorText> working both on:
+        <IconsContainer>
+          {osIcons.map((icon, i) => <Icon key={i}>{icon}</Icon>)}
+        </IconsContainer>
+      </Paragraph>
+      <Paragraph>
+        A partial overview of my personal projects can be found on my
         <LinkElement link="https://github.com/gkonar"><ColorText> GitHub </ColorText></LinkElement>
-        page. I was experymenting with many technologies to feel more comfortable. Currently in love
-        with <ColorText> React </ColorText>.
+        page. I was experymenting with many technologies to feel more comfortable.
       </Paragraph>
     </SectionContainer>
   )
