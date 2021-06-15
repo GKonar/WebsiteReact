@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import styled from 'styled-components';
 import PuffLoader from "react-spinners/PuffLoader";
-import { Hidden } from '@material-ui/core';
 
 const Container = styled.div`
   width: 100%;
@@ -15,7 +14,7 @@ const Container = styled.div`
   align-items: center;
 `
 
-function LoadingPage() {
+function LoadingPage({ loaded }) {
   const [isVisible, setIsVisible] = useState(true);
 
   const styles = {
@@ -24,8 +23,7 @@ function LoadingPage() {
   }
 
   useEffect(() => {
-    console.log('useEffect');
-    setTimeout(() => setIsVisible(false), 400);
+    setTimeout(() => setIsVisible(loaded), 500);
   }, []);
 
   return (

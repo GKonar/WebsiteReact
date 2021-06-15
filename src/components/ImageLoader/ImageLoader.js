@@ -1,9 +1,13 @@
-import React, { useState } from "react";
-import './imageAnimation.css';
+import React, { useState, useEffect } from "react";
+
+import LoadingPage from '../LoadingPage';
+
 import styled from 'styled-components';
 import { sizes } from '../../helpers/sizes';
-
 import { withStyles } from '@material-ui/core/styles';
+
+import './imageAnimation.css';
+
 
 const styles = {
   loaded: {
@@ -42,12 +46,17 @@ function ImageLoader({ classes, src }) {
 
   className = `${className} ${loaded ? classes.loaded : classes.loading}`
 
-  return <Image
-    // style={{ width: '100%', height: '100%' }}
-    src={src}
-    className={className}
-    onLoad={onLoad}
-    alt="lazy" />;
+  return (
+    <>
+      <Image
+        src={src}
+        className={className}
+        onLoad={onLoad}
+        alt="lazy"
+      />
+      <LoadingPage loaded={loaded} />
+    </>
+  )
 }
 
 export default withStyles(styles)(ImageLoader);
